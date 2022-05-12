@@ -53,10 +53,16 @@ for showName, showFeed in curratedShows.items():
     feedItems = []
     for feed in showFeed:
         episode = feedparser.parse(feed['url']).entries[0]
+
+        for enclosure in episode.enclosures:
+            if not enclosure['type'].split('/')[0] == "audio": continue
+            else: episodeLink = enclosure['href']
+
         feedItems.append(rfeed.Item(
             title = episode['title'],
-            link = episode['link'],
-            author = episode['author']
+            link = episodeLink,
+            author = episode['author'],
+            description = episode['description']
         ))
 
 
@@ -68,5 +74,5 @@ for showName, showFeed in curratedShows.items():
         items = feedItems
     )
 
-    with open(os.path.join(outputFolder, f'{showName}.rss'), 'wx') as rss:
+    with open(os.path.join(outputFolder, f'{showName}.rss'), 'w') as rss:
         rss.write(feed.rss())
