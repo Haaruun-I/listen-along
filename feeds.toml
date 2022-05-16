@@ -1,0 +1,168 @@
+categories = ["casual", "documentaries", "storytelling", "talk"]
+
+[[show]]
+title = "Morning Show"
+timetable = [ "-t casual funny", "-t storytelling", "-t news" ]
+
+[[show]]
+title = "Noon Hour"
+timetable =  ["-t news", "-t talk"]
+
+[[show]]
+title = "Bedtime"
+timetable = ["-t funny", "-t storytelling", "-t documentaries"]
+
+[[feed]]
+title = "99% Invisible"
+url = "https://feeds.simplecast.com/BqbsxVfO"
+tags = ["casual"]
+
+[[feed]]
+title = "CrowdScience"
+url = "https://podcasts.files.bbci.co.uk/p04d42rc.rss"
+tags = ["casual"]
+
+[[feed]]
+title = "How I Built This"
+url = "https://rss.art19.com/how-i-built-this"
+tags = ["casual"]
+
+[[feed]]
+title = "Only A Game"
+url = "https://feeds.npr.org/510052/podcast.xml"
+tags = ["funny", "casual"]
+
+[[feed]]
+title = "Planet Money"
+url = "https://feeds.npr.org/510289/podcast.xml"
+tags = ["casual"]
+
+[[feed]]
+title = "Reply All"
+url = "https://feeds.megaphone.fm/replyall"
+tags = ["casual"]
+
+[[feed]]
+title = "Science & Futurism with Isaac Arthur"
+url = "https://feeds.soundcloud.com/users/soundcloud:users:234608349/sounds.rss"
+tags = ["tech", "casual"]
+
+[[feed]]
+title = "Short Wave"
+url = "https://feeds.npr.org/510351/podcast.xml"
+tags = ["casual"]
+
+[[feed]]
+title = "The Splendid Table"
+url = "https://feeds.publicradio.org/public_feeds/the-splendid-table/itunes/rss.rss"
+tags = ["casual"]
+
+[[feed]]
+title = "Wait Wait... Don't Tell Me!"
+url = "https://feeds.npr.org/344098539/podcast.xml"
+tags = ["funny", "news", "casual"]
+
+[[feed]]
+title = "The Daily"
+url = "https://feeds.simplecast.com/54nAGcIl"
+tags = ["news", "casual"]
+
+[[feed]]
+title = "APM Reports Documentaries"
+url = "https://feeds.publicradio.org/public_feeds/apm-reports-documentaries/itunes/rss"
+tags = ["documentaries"]
+
+[[feed]]
+title = "Extremities"
+url = "https://anchor.fm/s/beba70c/podcast/rss"
+tags = ["serial", "documentaries"]
+
+[[feed]]
+title = "How It Began: A History of the Modern World"
+url = "https://anchor.fm/s/284a0060/podcast/rss"
+tags = ["documentaries"]
+
+[[feed]]
+title = "Intelligence Squared U.S. Debates"
+url = "https://feeds.megaphone.fm/PNP1207584390"
+tags = ["documentaries"]
+
+[[feed]]
+title = "Studio 360 with Kurt Andersen"
+url = "http://feeds.feedburner.com/studio360/podcast"
+tags = ["documentaries"]
+
+[[feed]]
+title = "Throughline"
+url = "https://feeds.npr.org/510333/podcast.xml"
+tags = ["documentaries"]
+
+[[feed]]
+title = "Snap Judgment"
+url = "https://snap.feed.snapjudgment.org"
+tags = ["storytelling"]
+
+[[feed]]
+title = "StoryCorps"
+url = "https://feeds.npr.org/510200/podcast.xml"
+tags = ["storytelling"]
+
+[[feed]]
+title = "The Moth"
+url = "http://feeds.themoth.org/themothpodcast"
+tags = ["storytelling"]
+
+[[feed]]
+title = "This American Life"
+url = "http://feed.thisamericanlife.org/talpodcast"
+tags = ["storytelling"]
+
+[[feed]]
+title = "RSlash"
+url = "https://anchor.fm/s/b29aa80/podcast/rss"
+tags = ["funny", "talk"]
+
+[[feed]]
+title = "Cortex"
+url = "https://www.relay.fm/cortex/feed"
+tags = ["talk"]
+
+[[feed]]
+title = "HTTP 203"
+url = "http://feeds.feedburner.com/Http203Podcast"
+tags = ["talk"]
+
+[[feed]]
+title = "OfflineTV Podcast"
+url = "https://feeds.simplecast.com/bbt_sv9A"
+tags = ["talk"]
+
+[[feed]]
+title = "Stuff You Should Know"
+url = "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/a91018a4-ea4f-4130-bf55-ae270180c327/44710ecc-10bb-48d1-93c7-ae270180c33e/podcast.rss"
+tags = ["funny", "talk"]
+
+[[feed]]
+title = "The Homelab Show"
+url = "https://thehomelab.show/feed/"
+tags = ["tech", "talk"]
+
+[[feed]]
+title = "The WAN Show"
+url = "https://anchor.fm/s/3cbbb3b8/podcast/rss"
+tags = ["tech", "news", "talk"]
+
+[[feed]]
+title = "Toolsday"
+url = "https://feeds.simplecast.com/a5Izfbx9"
+tags = ["tech", "talk"]
+
+[[music]]
+title = "HM Smurf"
+author = "Swix"
+link = "https://www.chosic.com/wp-content/uploads/2022/01/Missing-You.mp3"
+
+[[music]]
+title = "Import Media"
+author = "Novo"
+link = "https://www.chosic.com/wp-content/uploads/2022/01/Missing-You.mp3"
