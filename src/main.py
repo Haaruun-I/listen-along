@@ -10,6 +10,8 @@ import toml, os
 settingsFile = 'feeds.toml'
 outputFolder = "public/shows"
 
+print('bla')
+
 settings = toml.load(settingsFile)
 
 for showSettings in settings['show']:
