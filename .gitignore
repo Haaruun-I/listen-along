@@ -1,6 +1,6 @@
 # Project specific
 .vscode
-public/shows
+public/shows/*.rss
 logs.txt
 
 # Byte-compiled / optimized / DLL files
