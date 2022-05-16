@@ -8,7 +8,7 @@ import toml, os
 # TODO: website frontend
 
 settingsFile = 'feeds.toml'
-outputFolder = "out"
+outputFolder = "public/shows"
 
 settings = toml.load(settingsFile)
 
@@ -17,5 +17,6 @@ for showSettings in settings['show']:
         BasicRSSPlugin(settings["feed"]),
         Interlude(settings["music"])
     ])
+
     with open(os.path.join(outputFolder, f"{showSettings['title']}.rss"), 'w') as rss:
         rss.write(str(show))

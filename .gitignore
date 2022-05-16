@@ -1,7 +1,7 @@
 # Project specific
 *.toml
 .vscode
-out
+public/shows
 logs.txt
 
 # Byte-compiled / optimized / DLL files
