@@ -10,8 +10,6 @@ import toml, os
 settingsFile = 'feeds.toml'
 outputFolder = "public/shows"
 
-print('bla')
-
 settings = toml.load(settingsFile)
 
 for showSettings in settings['show']:
@@ -20,5 +18,5 @@ for showSettings in settings['show']:
         Interlude(settings["music"])
     ])
 
-    with open(os.path.join(outputFolder, f"{showSettings['title']}.rss"), 'w') as rss:
+    with open(os.path.join(outputFolder, f"{showSettings['title']}.rss"), 'w+') as rss:
         rss.write(str(show))
