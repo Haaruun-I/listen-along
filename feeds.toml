@@ -1,5 +1,3 @@
-categories = ["casual", "documentaries", "storytelling", "talk"]
-
 [[show]]
 title = "Morning Show"
 timetable = [ "-t casual funny", "-t storytelling", "-t news" ]
