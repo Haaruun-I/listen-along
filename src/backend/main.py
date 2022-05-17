@@ -17,7 +17,7 @@ for showSettings in settings['show']:
         Interlude(settings["music"])
     ])
 
-    filePath = os.path.join(outputFolder, f"{showSettings['title']}.rss")
+    filePath = os.path.join(outputFolder, showSettings['title'] + ".rss")
     if not os.path.exists(filePath): os.mknod(filePath)
 
     with open(filePath, 'w') as rss:
