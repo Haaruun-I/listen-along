@@ -6,8 +6,8 @@ import toml, os.path
 # TODO: keep track of played episodes
 # TODO: export history to opml
 
-settingsFile = 'feeds.toml'
-outputFolder = "public/shows"
+settingsFile = 'src/feeds.toml'
+outputFolder = "src/public/shows"
 
 settings = toml.load(settingsFile)
 
