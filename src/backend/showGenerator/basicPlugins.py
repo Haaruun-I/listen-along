@@ -1,4 +1,4 @@
-from showGenerator.showGenerator import BasePlugin
+from src.backend.showGenerator.showGenerator import BasePlugin
 
 from random import choice
 
