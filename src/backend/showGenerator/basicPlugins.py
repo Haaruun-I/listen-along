@@ -14,16 +14,19 @@ class BasicRSSPlugin(BasePlugin):
 
     def __init__(self, feedList):
         self.feedList = feedList
+        self.playedFeeds = []
 
     def getShowByName(self, args):
-        candidateFeeds = list(filter(lambda feed: args[0] == feed['title'],  self.feedList))
+        candidateFeeds = list(filter(lambda feed: args[0] == feed['title'] and
+                            not feed in self.playedFeeds,  self.feedList))
         if not candidateFeeds: raise AttributeError("No show with name " + args[0])
 
         return candidateFeeds
 
     def getShowByTags(self, args):
         candidateFeeds = list(filter(
-                lambda feed: all(category in feed['tags'] for category in args),
+                lambda feed: all(category in feed['tags'] for category in args) and
+                            not feed in self.playedFeeds,
                 self.feedList ))
         if not candidateFeeds: raise AttributeError("No show with tags " + args)
 

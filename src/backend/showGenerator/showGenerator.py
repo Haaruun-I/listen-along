@@ -28,6 +28,11 @@ class Show:
             for flag, method in plugin.customFlags.items():
                 self.customFlags[flag] = getattr(plugin, method)
 
+        itunesDetails = rfeed.iTunes(
+            image = showSettings['image']
+                if 'image' in showSettings else "localhost/static/mic-art.jpg",
+        )
+
         timetable = map(self.parseParameters, showSettings['timetable'])
         self.feed = rfeed.Feed(
             title = showSettings['title'],
@@ -35,6 +40,7 @@ class Show:
                 if 'description' in showSettings else "Automatic show: " + showSettings['title'],
             link = showSettings['url']
                 if 'url' in showSettings else "localhost",
+            extensions = [itunesDetails],
             items = self.fillTimetable(timetable)
         )
 
@@ -53,15 +59,23 @@ class Show:
         for candidateFeeds in timetable:
             chosenFeed = self.runPlugins('pickFeed', candidateFeeds)
             filledTimetable.append(self.runPlugins('pickEpisode', chosenFeed))
-            
-        filledTimetable = self.runPlugins('alterTimetable', filledTimetable)
 
-        return map(lambda episode: rfeed.Item(
+        filledTimetable = self.runPlugins('alterTimetable', filledTimetable)
+        outputFeed = []
+        for episode in filledTimetable:
+            details = []
+            if 'image' in chosenFeed:
+                details = [ rfeed.iTunesItem(image = chosenFeed.image['href']) ]
+            
+            outputFeed.append(rfeed.Item(
                 title = episode['title'],
                 link = episode['link'],
                 author = episode['author'],
-                description = episode['description']
-            ), filledTimetable)
+                description = episode['description'],
+                extensions = details
+            ))
+
+        return outputFeed
 
     def runPlugins(self, stage, parameters): # Cannot think of a better name
         for plugin in self.plugins:
