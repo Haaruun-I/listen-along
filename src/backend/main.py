@@ -1,14 +1,13 @@
 from showGenerator.basicPlugins import BasicRSSPlugin, Interlude
 from showGenerator.showGenerator import Show
-import toml, os
+import toml, os.path
 
 # TODO: go to backlog if there are no current shows that count
 # TODO: keep track of played episodes
 # TODO: export history to opml
-# TODO: website frontend
 
 settingsFile = 'feeds.toml'
-outputFolder = "public/shows"
+outputFolder = os.path.join("public", "shows")
 
 settings = toml.load(settingsFile)
 

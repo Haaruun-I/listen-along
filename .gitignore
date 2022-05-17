@@ -1,7 +1,6 @@
 # Project specific
 .vscode
-public/shows/*.rss
-logs.txt
+/*.rss
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
