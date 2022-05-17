@@ -1,5 +1,5 @@
-from showGenerator.basicPlugins import BasicRSSPlugin, Interlude
-from showGenerator.showGenerator import Show
+from src.backend.showGenerator.basicPlugins import BasicRSSPlugin, Interlude
+from src.backend.showGenerator.showGenerator import Show
 import toml, os.path
 
 # TODO: go to backlog if there are no current shows that count
