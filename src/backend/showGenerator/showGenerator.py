@@ -28,8 +28,6 @@ class Show:
             for flag, method in plugin.customFlags.items():
                 self.customFlags[flag] = getattr(plugin, method)
 
-        self.runPlugins('initializingShow', self)
-
         timetable = map(self.parseParameters, showSettings['timetable'])
         self.feed = rfeed.Feed(
             title = showSettings['title'],
@@ -67,6 +65,7 @@ class Show:
 
     def runPlugins(self, stage, parameters): # Cannot think of a better name
         for plugin in self.plugins:
+            plugin.initializingShow(self)
             try: 
                 stageMethod = getattr(plugin, stage)
                 parameters = stageMethod(parameters)

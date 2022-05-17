@@ -6,10 +6,18 @@ import toml, os.path
 # TODO: keep track of played episodes
 # TODO: export history to opml
 
-settingsFile = 'src/feeds.toml'
+settingsDir = 'settings/'
+settingsFile = settingsDir + "main.toml"
 outputFolder = "src/public/shows"
 
 settings = toml.load(settingsFile)
+
+imports = 'imports' in settings # so we can do recursive imports
+while imports:
+    for index, path in enumerate(settings['imports']):
+        settings.update(toml.load(settingsDir + path))
+        settings['imports'].pop(index)
+    imports = settings['imports']
 
 for showSettings in settings['show']:
     show = Show(showSettings, [

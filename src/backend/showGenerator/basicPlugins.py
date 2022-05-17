@@ -45,6 +45,9 @@ class Interlude(BasePlugin):
         self.musicList = musicList
 
     def alterTimetable(self, ogTimetabe):
+        if not 'interlude' in self.show.showSettings: return ogTimetabe
+        elif not self.show.showSettings['interlude']: return ogTimetabe
+
         newTimetable = []
         for timeslot in ogTimetabe:
             newTimetable.append(timeslot)

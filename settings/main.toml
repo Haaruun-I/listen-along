@@ -1,0 +1,14 @@
+imports = ["feeds.toml", "music.toml"]
+
+[[show]]
+title = "Morning Show"
+timetable = [ "-t casual funny", "-t storytelling", "-t news" ]
+
+[[show]]
+title = "Noon Hour"
+timetable =  ["-t news", "-t talk"]
+
+[[show]]
+title = "Bedtime"
+interlude = true
+timetable = ["-t funny", "-t storytelling", "-t documentaries"]
