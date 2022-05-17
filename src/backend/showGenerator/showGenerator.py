@@ -34,7 +34,7 @@ class Show:
         self.feed = rfeed.Feed(
             title = showSettings['title'],
             description = showSettings['description'] 
-                if 'description' in showSettings else f"Automatic show: {showSettings['title']}",
+                if 'description' in showSettings else "Automatic show: " + showSettings['title'],
             link = showSettings['url']
                 if 'url' in showSettings else "localhost",
             items = self.fillTimetable(timetable)
@@ -70,7 +70,7 @@ class Show:
             try: 
                 stageMethod = getattr(plugin, stage)
                 parameters = stageMethod(parameters)
-            except AttributeError: NotImplementedError(f"Please extend the BasePlugin class, {plugin} dosnt, dont be like them.")
+            except AttributeError: NotImplementedError("Please extend the BasePlugin class, " + plugin + " dosnt, dont be like them.")
             
 
         return parameters

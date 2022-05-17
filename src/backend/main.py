@@ -7,7 +7,7 @@ import toml, os.path
 # TODO: export history to opml
 
 settingsFile = 'feeds.toml'
-outputFolder = os.path.join("public", "shows")
+outputFolder = "public/shows"
 
 settings = toml.load(settingsFile)
 

@@ -17,7 +17,7 @@ class BasicRSSPlugin(BasePlugin):
 
     def getShowByName(self, args):
         candidateFeeds = list(filter(lambda feed: args[0] == feed['title'],  self.feedList))
-        if not candidateFeeds: raise AttributeError(f"No show with name {args[0]}")
+        if not candidateFeeds: raise AttributeError("No show with name " + args[0])
 
         return candidateFeeds
 
@@ -25,7 +25,7 @@ class BasicRSSPlugin(BasePlugin):
         candidateFeeds = list(filter(
                 lambda feed: all(category in feed['tags'] for category in args),
                 self.feedList ))
-        if not candidateFeeds: raise AttributeError(f"No show with tags {args}")
+        if not candidateFeeds: raise AttributeError("No show with tags " + args)
 
         return candidateFeeds
 
