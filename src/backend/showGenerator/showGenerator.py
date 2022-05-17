@@ -1,11 +1,5 @@
 from random import choice
 import rfeed, feedparser
-import logging
-
-logging.basicConfig(
-            filename = 'logs.txt', 
-            level = logging.INFO,
-            format = '%(levelname)s %(name)s: %(message)s' )
 
 class BasePlugin():
     customFlags = {}
